@@ -7,6 +7,8 @@ var tl = gsap.timeline({
 });
 
 function display_fun(element , class1 , class2 , class3 , class4 ,class5,y3,y4,stroke ) {
+  console.log(element);
+  console.log(stroke)
   tl.from(class1, {
     y: 50,
     stagger: .2,
@@ -18,7 +20,7 @@ function display_fun(element , class1 , class2 , class3 , class4 ,class5,y3,y4,s
       opacity: 0,
     }, "-=1.8")
     .to(class3, {
-      strokeDasharray:   stroke , 
+      strokeDasharray:   class1 == 'onload'? 1000 : stroke  , 
       ease: "power3.out"
     }, '-=0.7')
   gsap.from(class4, {
@@ -52,7 +54,7 @@ var tl0 = gsap.timeline({
     trigger: '.big-div',
     start: "center 105%",
     end: "center 80%",
-    onLeave: () => display_fun('7' , '.col1-left-part-1', '.left-sub-head-2','#Opaque_Ring' ,'.c7-rp-img1' , '.c7-rp-img2','-200','200'),
+    onLeave: () => display_fun('7' , '.col1-left-part-1', '.left-sub-head-2','#Opaque_Ring' ,'.c7-rp-img1' , '.c7-rp-img2','-200','200','140'),
     onEnterBack: () => display_fun('6', '.col1-left-part-0' , '.left-sub-head-1','#Opaque_Ring' ,'.c6-rp img' ,'.bottom-img','700','100','10 1000')
   }
 });
@@ -63,8 +65,8 @@ var tl1 = gsap.timeline({
     start: "center 85%",
     end: "center 70%",
     toggleActions: "restart reset restart reset",
-    onEnterBack: () => display_fun('7' , '.col1-left-part-1', '.left-sub-head-2','#Opaque_Ring' ,'.c7-rp-img1' , '.c7-rp-img2','-200','200'),
-    onLeave: () => display_fun('1','.col1-left-part-2','.left-sub-head-3','#Opaque_Ring','.nasa-fitness-app-img2','.nasa-fitness-app-img1','-200','200')
+    onEnterBack: () => display_fun('7' , '.col1-left-part-1', '.left-sub-head-2','#Opaque_Ring' ,'.c7-rp-img1' , '.c7-rp-img2','-200','200','140'),
+    onLeave: () => display_fun('1','.col1-left-part-2','.left-sub-head-3','#Opaque_Ring','.nasa-fitness-app-img2','.nasa-fitness-app-img1','-200','200','280')
   }
 });
 
@@ -75,8 +77,8 @@ var tl2 = gsap.timeline({
     start: "center 70%",
     end: "center 56%",
     
-    onEnterBack: () => display_fun('1','.col1-left-part-2','.left-sub-head-3','#Opaque_Ring','.nasa-fitness-app-img2','.nasa-fitness-app-img1','-200','200'),
-    onLeave: () => display_fun('2','.col1-left-part-3','.left-sub-head-3','#Opaque_Ring','.img-1','.img-2','200','-500')
+    onEnterBack: () => display_fun('1','.col1-left-part-2','.left-sub-head-3','#Opaque_Ring','.nasa-fitness-app-img2','.nasa-fitness-app-img1','-200','200','280'),
+    onLeave: () => display_fun('2','.col1-left-part-3','.left-sub-head-3','#Opaque_Ring','.img-1','.img-2','200','-500','420')
   }
 });
 
@@ -86,8 +88,8 @@ var tl3 = gsap.timeline({
     trigger: '.big-div',
     start: "center 56%",
     end: "center 43%",
-    onEnterBack: () => display_fun('2','.col1-left-part-3','.left-sub-head-3','#Opaque_Ring','.img-1','.img-2','200','-500'),
-    onLeave: () => display_fun('3','.c3-rp-img-1','.c3-rp-img-2','.c3-rp-img-3','.c3-rp-img-4','.c3-rp-img-5','200','200')
+    onEnterBack: () => display_fun('2','.col1-left-part-3','.left-sub-head-3','#Opaque_Ring','.img-1','.img-2','200','-500','420'),
+    onLeave: () => display_fun('3','.c3-rp-img-1','.c3-rp-img-2', '#Opaque_Ring','.c3-rp-img-3','.c3-rp-img-4','.c3-rp-img-5','200','560')
   }
 });
 
@@ -98,8 +100,8 @@ var tl4 = gsap.timeline({
     start: "center 43%",
     end: "center 30%",
     
-    onEnterBack: () => display_fun('3','.c3-rp-img-1','.c3-rp-img-2','.c3-rp-img-3','.c3-rp-img-4','.c3-rp-img-5','200','200'),
-    onLeave: () => display_fun('4','.col1-left-part-6','.left-sub-head-7','#Opaque_Ring','.bottom-img','.c4-rp-img','-200','700')
+    onEnterBack: () => display_fun('3','.c3-rp-img-1','.c3-rp-img-2', '#Opaque_Ring','.c3-rp-img-3','.c3-rp-img-4','.c3-rp-img-5','200','560'),
+    onLeave: () => display_fun('4','.col1-left-part-2','.left-sub-head-7', '#Opaque_Ring' ,'.bottom-img','.c4-rp-img','200','700','700')
   }
 });
 
@@ -109,8 +111,8 @@ var tl5 = gsap.timeline({
     trigger: '.big-div',
     start: "center 30%",
     end: "center 15%",
-    onEnterBack: () => display_fun('4','.col1-left-part-6','.left-sub-head-7','#Opaque_Ring','.bottom-img','.c5-rp-img1','.c5-rp-img2','','700'),
-    onLeave: () => display_fun('5', '.col1-left-part-2','.left-sub-head-3','#Opaque_Ring','.bottom-img','.c5-rp-img1','100','-200')
+    onEnterBack: () => display_fun('4','.col1-left-part-2','.left-sub-head-7', '#Opaque_Ring' ,'.bottom-img','.c4-rp-img','200','700','700'),
+    onLeave: () => display_fun('5', '.col1-left-part-2','.left-sub-head-3','#Opaque_Ring','.bottom-img','.c5-rp-img1','100','-200','840')
   }
 });
 
@@ -119,7 +121,7 @@ var tl6 = gsap.timeline({
     trigger: '.big-div',
     start: "center 15%",
     end: "center -2%",
-    onEnterBack: () => display_fun('5', '.col1-left-part-6','.left-sub-head-3','#Opaque_Ring','.bottom-img','.c5-rp-img1','100','-200'),
+    onEnterBack: () => display_fun('5', '.col1-left-part-6','.left-sub-head-3','#Opaque_Ring','.bottom-img','.c5-rp-img1','100','-200','840'),
     onLeave: () => display_fun('6', '.col1-left-part-0' , '.nh-c2-1','#Opaque_Ring' ,'.c6-rp img' ,'.bottom-img','700','100','10 1000')
   }
 });
