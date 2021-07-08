@@ -440,34 +440,34 @@
   
       .c3-rp    .c3-rp-img-2 {
         position: absolute;
-        bottom: -45%;
-        right: 30%;
+        bottom: -38%;
+        right: 28%;
         height: 550px;
-        width: 270px;
+        width: 239px;
       }
   
       .c3-rp .c3-rp-img-3 {
         position: absolute;
         top: -20%;
-        left: 20%;
+        left:  15%;
         height: 500px;
-        width: 280px;
+        width: 235px;
       }
   
       .c3-rp .c3-rp-img-4 {
         position: absolute;
-        bottom: -20%;
-        left: 20%;
+        bottom: -29%;
+        left: 12%;
         height: 500px;
-        width: 280px;
+        width: 255px;
       }
   
       .c3-rp .c3-rp-img-5 {
         position: absolute;
-        top: -5%;
-        left: 50%;
+        top: -19%;
+        left: 42%;
         height: 500px;
-        width: 280px;
+        width: 234px;
       }
     
   
@@ -664,7 +664,7 @@
       .c5-rp  .c5-rp-img1 {
         position: absolute;
         bottom: -10%;
-        right: 20%;
+        right: 9%;
         height: 600px;
         width: 300px;
       }
@@ -672,7 +672,7 @@
       .c5-rp  .c5-rp-img2 {
         position: absolute;
         bottom: -15%;
-        right: 37%;
+        right: 41%;
         height: 600px;
         width: 350px;
       }
@@ -769,16 +769,19 @@
   
       .c6-rp .c6-rp-img1 {
         position: absolute;
-        bottom: 10%;
+        bottom: 4%;
+      /*
         left: 10%;
+        */
         height: 650px;
         width: 400px;
       }
   
       .c6-rp  .c6-rp-img2 {
         position: absolute;
-        bottom: 10%;
-        right: 20%;
+        bottom: 4%;
+        
+        right: 8%;
         height: 650px;
         width: 400px;
       }
@@ -876,17 +879,20 @@
       .c7-rp .c7-rp-img1 {
         position: absolute;
         top: 0%;
-        right: 10%;
+      
+        right: 2%;
         height: 550px;
-        width: 350px;
+      
+        width: 330px;
       }
   
       .c7-rp  .c7-rp-img2 {
         position: absolute;
         bottom: 0%;
-        left: 20%;
+      
+        left: 14%;
         height: 550px;
-        width: 350px;
+        width: 330px;
       }
   
   .mobile-container {
@@ -1377,7 +1383,8 @@
   
           .c1-rp  .nasa-fitness-app-img1      img {
             height: 350px !important;
-            width: 200px !important;
+            width: 233px !important;
+            left: 28%;
           }
         
   
