@@ -46,7 +46,7 @@ function display_fun(element , class1 , class2 , class3 , class4 ,class5,y3,y4,s
 }
 
 
-//for scroll 
+//for scrollTrigger
 var tl0 = gsap.timeline({
   scrollTrigger: {
     trigger: '.big-div',
